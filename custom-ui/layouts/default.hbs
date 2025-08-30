@@ -3,9 +3,11 @@
 <head>
 {{> head defaultPageTitle='Untitled'}}
 </head>
-  <body class="article{{#with (or page.attributes.role page.role)}} {{{this}}}{{/with}}">
+
+<body class="article{{#with (or page.attributes.role page.role)}} {{{this}}}{{/with}}">
 {{> header}}
+{{> about}}
 {{> body}}
 {{> footer}}
-  </body>
+</body>
 </html>
