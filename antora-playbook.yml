@@ -1,0 +1,18 @@
+site:
+  title: How I Code
+  url: https://howicode.ericscouten.com
+  start_page: ROOT::index.adoc
+
+content:
+  sources:
+  - url: .
+    branches: HEAD
+    start_path: docs
+
+ui:
+  bundle:
+    url: https://gitlab.com/antora/antora-ui-default/-/jobs/artifacts/HEAD/raw/build/ui-bundle.zip?job=bundle-stable
+    snapshot: true
+
+output:
+  dir: ./build

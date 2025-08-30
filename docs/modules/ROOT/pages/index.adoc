@@ -1,0 +1,17 @@
+= How I Code
+
+Welcome to my coding documentation site.
+
+This site is built with https://antora.org[Antora^] and documents my coding practices, patterns, and methodologies.
+
+== Getting Started
+
+TO DO: Add content about your coding practices and methodologies.
+
+== Topics
+
+* Coming soon...
+
+== About
+
+This documentation is maintained by Eric Scouten and covers various aspects of software development practices.
