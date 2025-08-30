@@ -1,8 +1,15 @@
 {
+  "name": "howicode-site",
+  "version": "1.0.0",
+  "description": "How I Code documentation site built with Antora",
+  "engines": {
+    "node": ">=22.0.0"
+  },
   "scripts": {
     "build": "antora antora-playbook.yml",
     "serve": "npx http-server build -p 8080 -o",
-    "dev": "npm run build && npm run serve"
+    "dev": "npm run build && npm run serve",
+    "clean": "rm -rf build"
   },
   "devDependencies": {
     "@antora/cli": "3.1.12",
