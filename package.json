@@ -7,7 +7,7 @@
   },
   "scripts": {
     "build": "antora antora-playbook.yml",
-    "serve": "npx http-server build -p 8080 -o",
+    "serve": "npx http-server build -p 8080 -o -c-1",
     "dev": "npm run build && npm run serve",
     "clean": "rm -rf build"
   },
