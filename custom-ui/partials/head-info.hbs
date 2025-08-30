@@ -1,0 +1,21 @@
+    {{#unless (eq page.attributes.pagination undefined)}}
+    {{#with page.previous}}
+    <link rel="prev" href="{{{relativize ./url}}}">
+    {{/with}}
+    {{#with page.next}}
+    <link rel="next" href="{{{relativize ./url}}}">
+    {{/with}}
+    {{/unless}}
+    {{#with page.keywords}}
+    <meta name="keywords" content="{{{this}}}">
+    {{/with}}
+    <meta name="twitter:title" content="Eric Scouten :: How I Code">
+    <meta property="og:title" content="Eric Scouten :: How I Code">
+    <meta property="og:url" content="https://howicode.ericscouten.com/">
+    <meta property="twitter:url" content="https://howicode.ericscouten.com/">
+    <meta name="description" content="This is where I talk about how I think about writing code. I hope you enjoy following this or another of my blogs!">
+    <meta property="og:description" content="This is where I talk about how I think about writing code. I hope you enjoy following this or another of my blogs!">
+    <meta name="twitter:description" content="This is where I talk about how I think about writing code. I hope you enjoy following this or another of my blogs!">
+    <meta property="og:type" content="website">
+    <meta property="twitter:domain" content="https://howicode.ericscouten.com">
+
