@@ -1,4 +1,4 @@
-/* OVERRIDE: Prevent margin collapse on headings - must be at end to override other rules */
+/* OVERRIDE: Prevent margin collapse on headings - must be at end to override other rules. */
 h1, h2, h3, h4, h5, h6 {
     border-top: 1px solid transparent !important;
     border-bottom: 1px solid transparent !important;
@@ -7,7 +7,12 @@ h1, h2, h3, h4, h5, h6 {
     padding-bottom: 1rem !important;
 }
 
-/* Restore tight spacing between breadcrumbs and page title */
+/* Restore tight spacing between breadcrumbs and page title. */
 .page .title-assembly h1.title, .section .title-assembly h1.title, .taxonomy .title-assembly h1.title {
     padding-top: 0 !important;
+}
+
+/* Fix URL for endmark background. */
+.page .es-endmark .es-endmark-inner, .section .es-endmark .es-endmark-inner, .taxonomy .es-endmark .es-endmark-inner {
+    background-image: url("/_/img/endmark-background.png");
 }
