@@ -269,12 +269,6 @@ body {
     }
 }
 
-
-
-
-
-
-
 header { /* 11720 */
     background: linear-gradient(#262933, 70%, #262933, 90%, rgba(31, 26, 23, 0));
     opacity: 0;
@@ -378,7 +372,46 @@ header.show-page-title .title {
     }
 }
 
-about {
+.section { /* 11647 */
+    padding:3rem 1.5rem
+}
+
+@media screen and (min-width: 1024px) { /* 11651 */
+    .section {
+        padding:3rem 3rem
+    }
+
+    .section.is-medium {
+        padding:9rem 4.5rem
+    }
+
+    .section.is-large {
+        padding:18rem 6rem
+    }
+}
+
+.es_image { /* 11670 */
+    padding: 2vw 0;
+    max-width: 100vw;
+    text-align:center
+}
+
+.es_image img {
+    max-height:90vh
+}
+
+.es_image .caption {
+    margin-top: -.5em;
+    font-style: italic;
+    font-size:80%
+}
+
+.es_image .caption .caption-title {
+    font-style: normal;
+    font-weight:bold
+}
+
+about { /* 11827 */
     background: #262933;
     display: block;
     color: #ccc;
@@ -531,56 +564,13 @@ about .search-assembly .input::placeholder {
     }
 }
 
-@media screen and ((max-height: 600px) or(max-width: 600px)) {
+@media screen and ((max-height: 600px) or(max-width: 600px)) { /* 11980 */
     .optional {
         display:none
     }
 }
 
-.section { /* 12510 */
-    padding:3rem 1.5rem
-}
-
-section .container { /* 12515 */
-    max-width:none !important
-}
-
-@media screen and (min-width: 1024px) {
-    .section {
-        padding:3rem 3rem
-    }
-
-    .section.is-medium {
-        padding:9rem 4.5rem
-    }
-
-    .section.is-large {
-        padding:18rem 6rem
-    }
-}
-
-.es_image {
-    padding: 2vw 0;
-    max-width: 100vw;
-    text-align:center
-}
-
-.es_image img {
-    max-height:90vh
-}
-
-.es_image .caption {
-    margin-top: -.5em;
-    font-style: italic;
-    font-size:80%
-}
-
-.es_image .caption .caption-title {
-    font-style: normal;
-    font-weight:bold
-}
-
-.page, .section, .taxonomy {
+.page, .section, .taxonomy { /* 11986 */
     padding-top: 2em;
     margin-top:0
 }
@@ -818,21 +808,21 @@ section .container { /* 12515 */
     line-height:1
 }
 
-.page .es-endmark .es-endmark-inner .es-endmark-img img, .section .es-endmark .es-endmark-inner .es-endmark-img img, .taxonomy .es-endmark .es-endmark-inner .es-endmark-img img {
+.page .es-endmark .es-endmark-inner .es-endmark-img img, .section .es-endmark .es-endmark-inner .es-endmark-img img, .taxonomy .es-endmark .es-endmark-inner .es-endmark-img img { /* 12224 */
     height: 54px;
     width:54px
 }
 
-section {
+section { /* 12510 */
     padding: 1rem !important;
     background-color:#fff
 }
 
-section .container {
+section .container { /* 12515 */
     max-width:none !important
 }
 
-@font-face {
+@font-face { /* 12573 */
     font-family: "OculiText";
     src: url("https://img.ericscouten.com/theme/fonts/OculiText-Bold.woff2") format("woff2");
     font-weight: 700;
