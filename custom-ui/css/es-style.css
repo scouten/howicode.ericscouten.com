@@ -319,6 +319,70 @@ div.icon-text {
     width:128px
 }
 
+.title, .subtitle { /* 2942 */
+    word-break:break-word
+}
+
+.title em, .title span, .subtitle em, .subtitle span {
+    font-weight:inherit
+}
+
+.title sub, .subtitle sub {
+    font-size:.75em
+}
+
+.title sup, .subtitle sup {
+    font-size:.75em
+}
+
+.title .tag, .subtitle .tag {
+    vertical-align:middle
+}
+
+.title {
+    color: #363636;
+    font-size: 2rem;
+    font-weight: 600;
+    line-height:1.125
+}
+
+.title strong {
+    color: inherit;
+    font-weight:inherit
+}
+
+.title:not(.is-spaced) + .subtitle {
+    margin-top:-1.25rem
+}
+
+.title.is-1 {
+    font-size:3rem
+}
+
+.title.is-2 {
+    font-size:2.5rem
+}
+
+.title.is-3 {
+    font-size:2rem
+}
+
+.title.is-4 {
+    font-size:1.5rem
+}
+
+.title.is-5 {
+    font-size:1.25rem
+}
+
+.title.is-6 {
+    font-size:1rem
+}
+
+.title.is-7 { /* 3002 */
+    font-size:.75rem
+}
+
 .breadcrumb { /* 4308 */
     font-size: 1rem;
     white-space:nowrap
@@ -1116,4 +1180,13 @@ h2, h3, h4, h5, h6 {
     src: url("https://img.ericscouten.com/theme/fonts/OculiText-BlackItalic.woff2") format("woff2");
     font-weight: 900;
     font-style: italic
+}
+
+/* OVERRIDE: Prevent margin collapse on headings - must be at end to override other rules */
+h1, h2, h3, h4, h5, h6 {
+    border-top: 1px solid transparent !important;
+    border-bottom: 1px solid transparent !important;
+    margin: 0 auto !important;
+    padding-top: 2rem !important;
+    padding-bottom: 1rem !important;
 }
