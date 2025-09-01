@@ -159,6 +159,50 @@ body {
     width:128px
 }
 
+.container { /* 1772 */
+    flex-grow: 1;
+    margin: 0 auto;
+    position: relative;
+    width:auto
+}
+
+.container.is-fluid {
+    max-width: none !important;
+    padding-left: 32px;
+    padding-right: 32px;
+    width:100%
+}
+
+@media screen and (min-width: 1024px) {
+    .container {
+        max-width:960px
+    }
+}
+
+@media screen and (max-width: 1215px) {
+    .container.is-widescreen:not(.is-max-desktop) {
+        max-width:1152px
+    }
+}
+
+@media screen and (max-width: 1407px) {
+    .container.is-fullhd:not(.is-max-desktop):not(.is-max-widescreen) {
+        max-width:1344px
+    }
+}
+
+@media screen and (min-width: 1216px) {
+    .container:not(.is-max-desktop) {
+        max-width:1152px
+    }
+}
+
+@media screen and (min-width: 1408px) {
+    .container:not(.is-max-desktop):not(.is-max-widescreen) {
+        max-width:1344px
+    }
+}
+
 .media {
     align-items: flex-start;
     display: flex;
@@ -219,13 +263,19 @@ body {
     text-align:inherit
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 768px) { /* 4740 */
     .media-content {
         overflow-x:auto
     }
 }
 
-header {
+
+
+
+
+
+
+header { /* 11720 */
     background: linear-gradient(#262933, 70%, #262933, 90%, rgba(31, 26, 23, 0));
     opacity: 0;
     display: block;
@@ -487,8 +537,12 @@ about .search-assembly .input::placeholder {
     }
 }
 
-.section {
+.section { /* 12510 */
     padding:3rem 1.5rem
+}
+
+section .container { /* 12515 */
+    max-width:none !important
 }
 
 @media screen and (min-width: 1024px) {
