@@ -1,0 +1,7 @@
+{{#if page.attributes.hyvor-talk-id}}
+{{#unless (exists page.attributes.disable-comments)}}
+<div class="comments">
+  <hyvor-talk-comments website-id="{{page.attributes.hyvor-talk-id}}" page-id="{{{page.url}}}"></hyvor-talk-comments>
+</div>
+{{/unless}}
+{{/if}}
