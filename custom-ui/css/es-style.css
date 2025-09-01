@@ -25,6 +25,10 @@ html {
     text-size-adjust:100%
 }
 
+article, aside, figure, footer, header, hgroup, section {
+    display:block
+}
+
 body, button, input, optgroup, select, textarea {
     font-family:OculiText, alegreya, serif
 }
@@ -483,6 +487,24 @@ about .search-assembly .input::placeholder {
     }
 }
 
+.section {
+    padding:3rem 1.5rem
+}
+
+@media screen and (min-width: 1024px) {
+    .section {
+        padding:3rem 3rem
+    }
+
+    .section.is-medium {
+        padding:9rem 4.5rem
+    }
+
+    .section.is-large {
+        padding:18rem 6rem
+    }
+}
+
 .es_image {
     padding: 2vw 0;
     max-width: 100vw;
@@ -502,6 +524,258 @@ about .search-assembly .input::placeholder {
 .es_image .caption .caption-title {
     font-style: normal;
     font-weight:bold
+}
+
+.page, .section, .taxonomy {
+    padding-top: 2em;
+    margin-top:0
+}
+
+.page #es-content, .section #es-content, .taxonomy #es-content {
+    display: flex;
+    flex-direction:column
+}
+
+.page #es-content p:first-of-type, .section #es-content p:first-of-type, .taxonomy #es-content p:first-of-type {
+    font-size: 115%;
+    order: -2;
+    -webkit-order:-2
+}
+
+.page #es-content #toc, .section #es-content #toc, .taxonomy #es-content #toc {
+    font-family: expo-sans-pro, sans-serif;
+    order: -1;
+    -webkit-order: -1;
+    line-height:1.4em
+}
+
+.page #es-content #toc ul, .section #es-content #toc ul, .taxonomy #es-content #toc ul {
+    margin:0 auto
+}
+
+.page .page-date, .section .page-date, .taxonomy .page-date {
+    color: #999;
+    font-family: expo-sans-pro, sans-serif;
+    font-size: 81% !important;
+    font-weight: normal;
+    margin-top: -1.2em;
+    margin-bottom:2em
+}
+
+.page .page-date .date, .section .page-date .date, .taxonomy .page-date .date {
+    color: #000;
+    font-weight:bold
+}
+
+.page .page-date .es-tag a, .section .page-date .es-tag a, .taxonomy .page-date .es-tag a {
+    color:#999
+}
+
+.page ul li, .section ul li, .taxonomy ul li {
+    margin: .25em 0 .25em 1.5em;
+    list-style:disc
+}
+
+.page ul li p:first-of-type, .section ul li p:first-of-type, .taxonomy ul li p:first-of-type {
+    font-size:1.3rem !important
+}
+
+.page .breadcrumb, .section .breadcrumb, .taxonomy .breadcrumb {
+    font-family: expo-sans-pro, sans-serif;
+    margin-bottom:1em
+}
+
+.page .breadcrumb ul li, .section .breadcrumb ul li, .taxonomy .breadcrumb ul li {
+    margin:0
+}
+
+.page .breadcrumb ul li a, .section .breadcrumb ul li a, .taxonomy .breadcrumb ul li a {
+    padding:0 .4em
+}
+
+.page .breadcrumb ul li:first-of-type, .section .breadcrumb ul li:first-of-type, .taxonomy .breadcrumb ul li:first-of-type {
+    padding-left:0
+}
+
+.page .breadcrumb ul li:first-of-type a, .section .breadcrumb ul li:first-of-type a, .taxonomy .breadcrumb ul li:first-of-type a {
+    padding-left:0
+}
+
+.page .breadcrumb ul li:first-of-type .icon, .section .breadcrumb ul li:first-of-type .icon, .taxonomy .breadcrumb ul li:first-of-type .icon {
+    margin:0
+}
+
+.page .title-assembly, .section .title-assembly, .taxonomy .title-assembly {
+    margin-top: 0;
+    margin-bottom:3em
+}
+
+.page .title-assembly h1.title, .section .title-assembly h1.title, .taxonomy .title-assembly h1.title {
+    font-size: 200%;
+    line-height: 100%;
+    margin-top: 0;
+    margin-bottom:.5em
+}
+
+.page .title-assembly h1.title .top-section-home, .section .title-assembly h1.title .top-section-home, .taxonomy .title-assembly h1.title .top-section-home {
+    font-size:35%
+}
+
+.page .title-assembly ul.page_meta, .section .title-assembly ul.page_meta, .taxonomy .title-assembly ul.page_meta {
+    margin: 3em auto;
+    max-width: 40rem;
+    font-family: expo-sans-pro, sans-serif;
+    font-size:80%
+}
+
+.page .title-assembly ul.page_meta li, .section .title-assembly ul.page_meta li, .taxonomy .title-assembly ul.page_meta li {
+    list-style: none;
+    margin: .25em 0;
+    line-height:1.1em
+}
+
+.page a, .section a, .taxonomy a {
+    color:#838aa2
+}
+
+.page blockquote, .section blockquote, .taxonomy blockquote {
+    background-color: #e6e8ec;
+    margin: 1em auto;
+    max-width: 40rem;
+    border-left: 6px solid #c1c4d1;
+    padding-left: 1.25rem;
+    padding-right:1rem
+}
+
+.page blockquote p:first-of-type, .section blockquote p:first-of-type, .taxonomy blockquote p:first-of-type {
+    font-size:1.3rem !important
+}
+
+.page .card, .section .card, .taxonomy .card {
+    background-color: #ddd;
+    margin:4rem 0
+}
+
+.page .card-header, .section .card-header, .taxonomy .card-header {
+    font-family: expo-sans-pro, sans-serif;
+    margin: .5em .5em 0 .5em;
+    padding-bottom: .5em;
+    border-bottom: 1px solid #aaa;
+    box-shadow:none
+}
+
+.page .card-header .card-header-title, .section .card-header .card-header-title, .taxonomy .card-header .card-header-title {
+    display: block;
+    color:#000
+}
+
+.page .card-header .card-header-title a, .section .card-header .card-header-title a, .taxonomy .card-header .card-header-title a {
+    color:#000
+}
+
+.page .card-header .card-header-title .breadcrumb, .section .card-header .card-header-title .breadcrumb, .taxonomy .card-header .card-header-title .breadcrumb {
+    padding-top: .5em;
+    line-height: 1em;
+    opacity:50%
+}
+
+.page .card-header .card-header-title .breadcrumb ul, .section .card-header .card-header-title .breadcrumb ul, .taxonomy .card-header .card-header-title .breadcrumb ul {
+    margin:0
+}
+
+.page .card-header .card-header-title .breadcrumb a:hover, .section .card-header .card-header-title .breadcrumb a:hover, .taxonomy .card-header .card-header-title .breadcrumb a:hover {
+    color:#fff
+}
+
+.page .card-header .card-header-title item, .section .card-header .card-header-title item, .taxonomy .card-header .card-header-title item {
+    display:block
+}
+
+.page .card-header .card-header-title .title, .section .card-header .card-header-title .title, .taxonomy .card-header .card-header-title .title {
+    font-size: 120%;
+    font-weight: 700;
+    margin:.25rem 0
+}
+
+.page .card-header .card-header-title .date, .section .card-header .card-header-title .date, .taxonomy .card-header .card-header-title .date {
+    opacity: 80%;
+    font-weight: 400;
+    font-size: 70%;
+    line-height:1
+}
+
+.page .card-image, .section .card-image, .taxonomy .card-image {
+    margin-top:-1px
+}
+
+.page .card-content, .section .card-content, .taxonomy .card-content {
+    font-size:1.25rem
+}
+
+.page .card-content .content, .section .card-content .content, .taxonomy .card-content .content {
+    margin:-2rem 0
+}
+
+.page .card-content p:first-of-type, .section .card-content p:first-of-type, .taxonomy .card-content p:first-of-type {
+    font-size:1.25rem !important
+}
+
+.page .card-content .read-more, .section .card-content .read-more, .taxonomy .card-content .read-more {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-family: expo-sans-pro, sans-serif;
+    font-size: 80%;
+    text-align:right
+}
+
+.page .subsections, .section .subsections, .taxonomy .subsections {
+    font-family: expo-sans-pro, sans-serif;
+    font-size: 75%;
+    list-style:none
+}
+
+.page .subsections li, .section .subsections li, .taxonomy .subsections li {
+    margin: 0 2em 0 0;
+    display: inline;
+    white-space:nowrap
+}
+
+.page .subsections li a:hover, .section .subsections li a:hover, .taxonomy .subsections li a:hover {
+    text-decoration:none
+}
+
+.page .subsections li a:hover .sub-title, .section .subsections li a:hover .sub-title, .taxonomy .subsections li a:hover .sub-title {
+    text-decoration:underline
+}
+
+.page .es-endmark .es-endmark-inner, .section .es-endmark .es-endmark-inner, .taxonomy .es-endmark .es-endmark-inner {
+    background-image: url("/common/endmark-background.png");
+    background-repeat: repeat-x;
+    background-position: center center;
+    margin: 4rem auto;
+    max-width:24rem
+}
+
+.page .es-endmark .es-endmark-inner .es-endmark-img, .section .es-endmark .es-endmark-inner .es-endmark-img, .taxonomy .es-endmark .es-endmark-inner .es-endmark-img {
+    background: #fff;
+    text-align: center;
+    margin: 0 auto;
+    width: 104px;
+    line-height:1
+}
+
+.page .es-endmark .es-endmark-inner .es-endmark-img img, .section .es-endmark .es-endmark-inner .es-endmark-img img, .taxonomy .es-endmark .es-endmark-inner .es-endmark-img img {
+    height: 54px;
+    width:54px
+}
+
+section {
+    padding: 1rem !important;
+    background-color:#fff
+}
+
+section .container {
+    max-width:none !important
 }
 
 @font-face {
