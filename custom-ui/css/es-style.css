@@ -925,6 +925,7 @@ about .search-assembly .input::placeholder {
 .page .title-assembly h1.title, .section .title-assembly h1.title, .taxonomy .title-assembly h1.title {
     font-size: 200%;
     line-height: 100%;
+    padding-top: 0 !important;
     margin-top: 0;
     margin-bottom:.5em
 }
