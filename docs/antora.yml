@@ -5,3 +5,7 @@ start_page: index.adoc
 
 nav:
 - modules/ROOT/nav.adoc
+
+asciidoc:
+  attributes:
+    page-pagination: ''
