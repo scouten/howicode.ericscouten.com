@@ -1,8 +1,0 @@
-= Credits
-:page-date: 2025-09-01
-
-This site is built with https://antora.org[Antora^] and documents my coding practices, patterns, and methodologies. The site template (aka Antora UI) is loosely based on the https://docs.antora.org/antora-ui-default/[Antora Default UI].
-
-////
-Also credit: Bulma, Hyvor Talk, and Netlify.
-////

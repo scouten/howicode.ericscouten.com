@@ -1,2 +1,2 @@
 * xref:index.adoc[Home]
-* xref:credits.adoc[]
+* xref:site-credits.adoc[]

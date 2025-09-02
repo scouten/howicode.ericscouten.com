@@ -1,0 +1,9 @@
+= Site Credits
+
+Unlike https://ericscouten.dev/2021/how-i-built-146-parks/[most of my sites^], this site is built with https://antora.org[Antora^] and https://asciidoc.org[Asciidoc^]. The site template (aka Antora UI) is loosely based on the https://docs.antora.org/antora-ui-default/[Antora Default UI]. I did this primarily because Antora's site structure is much more conducive to a document structure than https://www.getzola.org[Zola], which I continue to use and love for my more blog-like sites.
+
+I use several other technologies which are common to all of my sites:
+
+* https://www.netlify.com[*Netlify*], which excels at taking GitHub-hosted site contents, rendering them to HTML, JS, and CSS and hosting them.
+* https://talk.hyvor.com[*Hyvor Talk*], a commenting platform designed for static sites such as my own.
+* https://bulma.io/documentation/features/themes/[*Bulma*], a core CSS theme package that provides a lot of desirable behavior out of the box.
