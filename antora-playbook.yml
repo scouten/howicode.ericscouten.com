@@ -3,6 +3,10 @@ site:
   url: https://howicode.ericscouten.com
   start_page: ROOT::index.adoc
 
+antora:
+  extensions:
+    - ./extensions/git-dates-extension.js
+
 content:
   sources:
   - url: .

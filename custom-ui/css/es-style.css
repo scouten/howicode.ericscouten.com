@@ -24,6 +24,10 @@ cta h2, cta h3, cta h4 {
     background-image: url("/_/img/endmark-background.png");
 }
 
+.page-date {
+    padding-top: .2em;
+}
+
 /* Pagination adapted from Antora default UI -- Add to Zola template? */
 nav.pagination {
     font-family: expo-sans-pro,sans-serif;

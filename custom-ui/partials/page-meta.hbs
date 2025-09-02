@@ -1,0 +1,13 @@
+{{#if page.attributes.first_commit_date}}
+<p class="page-date">
+  <span class="date">
+    {{page.attributes.first_commit_date}}
+  </span>
+</p>
+{{/if}}
+
+<ul class="page_meta">
+  {{#if (and page.attributes.last_commit_date (ne page.attributes.first_commit_date page.attributes.last_commit_date))}}
+  <li>Last updated on {{page.attributes.last_commit_date}}</li>
+  {{/if}}
+</ul>
