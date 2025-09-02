@@ -1,4 +1,4 @@
-/* OVERRIDE: Prevent margin collapse on headings - must be at end to override other rules. */
+/* OVERRIDE: Prevent margin collapse on headings. */
 h1, h2, h3, h4, h5, h6 {
     border-top: 1px solid transparent !important;
     border-bottom: 1px solid transparent !important;
@@ -12,8 +12,16 @@ h1, h2, h3, h4, h5, h6 {
     padding-top: 0 !important;
 }
 
-/* Restore tighter spacing in CTA block. */
+/* Fix larger first paragraph. Antora wraps every paragraph in a div which means they're all first-of-type. Not quite what we want. */
+.page #es-content p:first-of-type, .section #es-content p:first-of-type, .taxonomy #es-content p:first-of-type {
+    font-size: 100%;
+}
 
+#es-content #preamble div.paragraph:first-of-type, #es-content > div.paragraph:first-of-type {
+    font-size: 115%;
+}
+
+/* Restore tighter spacing in CTA block. */
 cta h2, cta h3, cta h4 {
     margin: 0 auto !important;
     padding: .5em 0 0 !important;

@@ -1,6 +1,8 @@
 = Site Credits
 
-Unlike https://ericscouten.dev/2021/how-i-built-146-parks/[most of my sites^], this site is built with https://antora.org[Antora^] and https://asciidoc.org[Asciidoc^]. The site template (aka Antora UI) is loosely based on the https://docs.antora.org/antora-ui-default/[Antora Default UI]. I did this primarily because Antora's site structure is much more conducive to a document structure than https://www.getzola.org[Zola], which I continue to use and love for my more blog-like sites.
+Unlike https://ericscouten.dev/2021/how-i-built-146-parks/[most of my sites^], this site is built with https://antora.org[Antora^] and https://asciidoc.org[Asciidoc^].
+
+The site template (aka Antora UI) is loosely based on the https://docs.antora.org/antora-ui-default/[Antora Default UI]. I did this primarily because Antora's site structure is much more conducive to a document structure than https://www.getzola.org[Zola], which I continue to use and love for my more blog-like sites.
 
 I use several other technologies which are common to all of my sites:
 
