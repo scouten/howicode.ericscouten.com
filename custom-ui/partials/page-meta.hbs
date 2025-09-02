@@ -1,3 +1,4 @@
+{{#unless (exists page.attributes.disable-date)}}
 {{#if page.attributes.first_commit_date}}
 <p class="page-date">
   <span class="date">
@@ -5,9 +6,12 @@
   </span>
 </p>
 {{/if}}
+{{/unless}}
 
 <ul class="page_meta">
+  {{#unless (exists page.attributes.disable-date)}}
   {{#if (and page.attributes.last_commit_date (ne page.attributes.first_commit_date page.attributes.last_commit_date))}}
   <li>Last updated on {{page.attributes.last_commit_date}}</li>
   {{/if}}
+  {{/unless}}
 </ul>

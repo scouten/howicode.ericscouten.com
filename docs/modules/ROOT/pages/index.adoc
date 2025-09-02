@@ -1,5 +1,6 @@
 = How I Code
 :page-disable-comments:
+:page-disable-date:
 
 Welcome to my coding documentation site.
 
