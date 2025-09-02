@@ -63,7 +63,7 @@ nav.pagination span::before {
 }
 
 nav.pagination .prev::before {
-    content: "Prev";
+    content: "Previous";
 }
 
 nav.pagination .next::before {
