@@ -12,6 +12,13 @@ h1, h2, h3, h4, h5, h6 {
     padding-top: 0 !important;
 }
 
+/* Restore tighter spacing in CTA block. */
+
+cta h2, cta h3, cta h4 {
+    margin: 0 auto !important;
+    padding: .5em 0 0 !important;
+}
+
 /* Fix URL for endmark background. */
 .page .es-endmark .es-endmark-inner, .section .es-endmark .es-endmark-inner, .taxonomy .es-endmark .es-endmark-inner {
     background-image: url("/_/img/endmark-background.png");
