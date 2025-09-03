@@ -1,2 +1,3 @@
 * xref:index.adoc[Home]
+* xref:guiding-principles.adoc[]
 * xref:site-credits.adoc[]

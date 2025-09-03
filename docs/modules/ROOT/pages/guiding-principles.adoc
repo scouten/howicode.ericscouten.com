@@ -1,0 +1,50 @@
+= Guiding Principles
+
+On this page, I'll attempt to capture some of the big-picture ideas that inform the more specific ideas that I present on subsequent pages.
+These are my North Star(s) -- what I think is most important, regardless of the environment I'm in.
+
+[#consistent]
+== Be consistent
+
+If you do something one way in one place, do it the same way in _all_ the places.
+Choose a style and stick to it.
+There are exceptions, of course, and you'll find some in this style guide.
+
+[#fit-in]
+== Fit in
+
+Your code should fit comfortably within the project or language community in which you are working.
+Learn the “house rules” where you are working and follow that style as best you can.
+If the house rules aren't comfortable, advocate for change, but be prepared to accept a consensus that doesn't agree with your personal style.
+If the house rules are ambiguous or not stated on a particular topic, lead by example.
+
+NOTE: If you're planning to contribute to a project where I am the lead or primary developer, this site describes the house rules.
+
+[#legibility]
+== Favor legibility
+
+Think carefully about the future readers of your code.
+That might be future you, but it could also be somebody who doesn't have the experience or context that you do when you were writing the code.
+
+[#dont-be-clever]
+== Don't be clever
+
+If there's a “clever” way to do something and a legible/comprehensible way to do something, favor the legible way unless you can articulate a meaningful benefit to being clever.
+
+[#proofread]
+== Proofread carefully
+
+The quality of your written word is easily interpreted as a signal of the quality of the overall work.
+Invest in well-written language: It's a sales pitch for your work.
+
+[#make-it-small]
+== Make it as small as possible
+
+Whether you're talking about a function, a data structure, or a larger concept such as a module or a crate, always look for ways to make the thing smaller.
+Favor having lots of small things over a few big things.
+
+[#one-thing]
+== Make it do one thing
+
+Related to <<make-it-small>>, avoid mixing purposes in any concept.
+If you find yourself describing the thing (again: function, data structure, module, etc.) using the word “and,” consider whether you can divide the thing into two or more peers that each do one thing.
