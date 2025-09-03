@@ -488,3 +488,7 @@ nav.pagination .next a::after {
   background-color: var(--warning-color);
   color: var(--warning-on-color);
 }
+
+.page .comments {
+  width: 40rem;
+}
