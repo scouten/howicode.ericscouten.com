@@ -8,10 +8,10 @@
 {{/if}}
 {{/unless}}
 
+{{#unless (exists page.attributes.disable-date)}}
+{{#if (and page.attributes.last_commit_date (ne page.attributes.first_commit_date page.attributes.last_commit_date))}}
 <ul class="page_meta">
-  {{#unless (exists page.attributes.disable-date)}}
-  {{#if (and page.attributes.last_commit_date (ne page.attributes.first_commit_date page.attributes.last_commit_date))}}
   <li>Last updated on {{page.attributes.last_commit_date}}</li>
-  {{/if}}
-  {{/unless}}
 </ul>
+{{/if}}
+{{/unless}}

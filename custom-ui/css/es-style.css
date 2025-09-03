@@ -12,6 +12,70 @@ h1, h2, h3, h4, h5, h6 {
     padding-top: 0 !important;
 }
 
+.page .title-assembly {
+  margin-bottom: 1.4em;
+}
+
+/* Set up for Antora TOC sidebar. */
+@media screen and (min-width: 1024px) {
+  .body {
+    display: flex;
+  }
+  
+  .section {
+    display: flex;
+    align-items: stretch;
+    min-height: 100vh;
+    position: relative; /* allow absolute-positioned nav to anchor here */
+  }
+}
+
+/* Porting note:
+    * Antora ".container" -> es-style ".container". 
+    * Antora ".content" -> es-style ".page".
+*/
+@media screen and (max-width: 1023.5px) {
+  aside.toc.sidebar {
+    display: none;
+  }
+
+  .container > .page {
+    overflow-x: auto;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .container {
+    flex: auto;
+    min-width: 0; /* min-width: 0 required for flexbox to constrain overflowing elements */
+    display: flex;
+    flex-direction: column;
+    width: 100%; /* allow content to span underneath nav */
+  }
+
+  .container > .page {
+    display: flex;
+    flex-direction: column;
+  }
+
+  aside.toc.embedded {
+    display: none;
+  }
+
+  aside.toc.sidebar {
+    flex: 0 0 var(--toc-width);
+    order: 1;
+  }
+}
+
+section.section {
+  padding: 0 !important;
+}
+
+section .container {
+  margin-top: 1rem;
+}
+
 /* Fix larger first paragraph. Antora wraps every paragraph in a div which means they're all first-of-type. Not quite what we want. */
 .page #es-content p:first-of-type, .section #es-content p:first-of-type, .taxonomy #es-content p:first-of-type {
     font-size: 100%;
@@ -41,6 +105,7 @@ nav.pagination {
     font-family: expo-sans-pro,sans-serif;
     font-size: 90%;
     max-width: 40rem;
+    width: 100%;
     display: flex;
     line-height: 1;
     margin: 2rem auto;
@@ -49,7 +114,7 @@ nav.pagination {
 
 nav.pagination span {
     display: flex;
-    flex: 50%;
+    flex: 1;
     flex-direction: column;
 }
 
@@ -59,7 +124,6 @@ nav.pagination .prev {
 }
 
 nav.pagination .next {
-    margin-left: auto;
     padding-left: 0.5rem;
     text-align: right;
 }
@@ -102,4 +166,212 @@ nav.pagination .prev a::before {
 
 nav.pagination .next a::after {
     content: "\203a";
+}
+
+/* TOC menu */
+@media screen and (max-width: 1023.5px) {
+  html.is-clipped--nav {
+    overflow-y: hidden;
+  }
+}
+
+.nav-container {
+  font-family: expo-sans-pro,sans-serif;
+  position: fixed;
+  top: 0; /* var(--navbar-height); */
+  left: 0;
+  width: 100%;
+  font-size: 85%; /* calc(17 / var(--rem-base) * 1rem); */
+  z-index: 1;
+  visibility: hidden;
+}
+
+.nav-container .title, .nav-container .title a {
+  color: #888;
+}
+
+@media screen and (min-width: 769px) {
+  .nav-container {
+    width: calc(8vw + 5rem); /* var(--nav-width); */
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .nav-container {
+    font-size: 80%;
+    flex: none;
+    position: absolute; /* overlap the content horizontally */
+    left: 0;
+    top: 0;
+    bottom: 0; /* stretch to section height */
+    z-index: 2;
+    visibility: visible;
+    background: #ddd; /* var(--nav-background); */
+    overflow: hidden;
+  }
+}
+.nav-container.is-active {
+  visibility: visible;
+}
+
+.nav {
+  position: relative;
+  top: 3.5rem; /* var(--toolbar-height); */
+  height: calc(100vh - 3.5rem); /* var(--nav-height); */
+}
+
+@media screen and (min-width: 769px) {
+  .nav {
+    box-shadow: 0.5px 0 3px #aaa; /* var(--nav-border-color); */
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .nav {
+    top: 0;
+    box-shadow: none;
+    position: absolute; /* fill nav-container */
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.nav a {
+  color: inherit;
+}
+
+.nav .panels {
+  display: flex;
+  flex-direction: column;
+  height: inherit;
+}
+
+.nav-panel-menu {
+  overflow-y: scroll;
+  overscroll-behavior: none;
+  height: calc(100% - 2.5rem); /* var(--nav-panel-menu-height); */
+}
+
+@media screen and (min-width: 1024px) {
+  .nav-panel-menu {
+    overflow-y: visible;
+  }
+}
+
+.nav-panel-menu:only-child {
+  height: 100%;
+}
+
+.nav-panel-menu:not(.is-active) .nav-menu {
+  opacity: 0.75;
+}
+
+.nav-panel-menu:not(.is-active)::after {
+  content: "";
+  /* background: rgba(0, 0, 0, 0.5); */
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.nav-menu {
+  min-height: 100%;
+  padding: 0.5rem 0.75rem;
+  line-height: 1.35; /* var(--nav-line-height); */
+  position: relative;
+}
+
+.nav-menu-toggle {
+  background: transparent url(../img/octicons-16.svg#view-unfold) no-repeat center / 100% 100%;
+  border: none;
+  float: right;
+  height: 1em;
+  margin-right: -0.5rem;
+  opacity: 0.75;
+  outline: none;
+  padding: 0;
+  position: sticky;
+  top: .85rem; /* calc((var(--nav-line-height) - 1 + 0.5) * 1rem); */
+  visibility: hidden;
+  width: 1em;
+}
+
+.nav-menu-toggle.is-active {
+  background-image: url(../img/octicons-16.svg#view-fold);
+}
+
+.nav-panel-menu.is-active:hover .nav-menu-toggle {
+  visibility: visible;
+}
+
+.nav-menu h3.title {
+  color: #424242; /* var(--nav-heading-font-color); */
+  font-size: inherit;
+  font-weight: 600; /* var(--body-font-weight-bold); */
+  margin: 0;
+  padding: 0.25em 0 0.125em;
+}
+
+.nav-container .nav .nav-list {
+  list-style: none;
+  margin: 0 0 0 0.75rem;
+  padding: 0;
+}
+
+.nav-container .nav .nav-list li {
+  list-style: none;
+  margin-left: 0;
+}
+
+.nav-menu > .nav-list + .nav-list {
+  margin-top: 0.5rem;
+}
+
+.nav-item {
+  margin-top: 0.5em;
+}
+
+/* adds some breathing room below a nested list */
+.nav-item-toggle ~ .nav-list {
+  padding-bottom: 0.125rem;
+}
+
+/* matches list without a title */
+.nav-item[data-depth="0"] > .nav-list:first-child {
+  display: block;
+  margin: 0;
+}
+
+.nav-item:not(.is-active) > .nav-list {
+  display: none;
+}
+
+.nav-item-toggle {
+  background: transparent url(../img/caret.svg) no-repeat center / 50%;
+  border: none;
+  outline: none;
+  line-height: inherit;
+  padding: 0;
+  position: absolute;
+  height: 1.35em; /* calc(var(--nav-line-height) * 1em); */
+  width: 1.35em; /* calc(var(--nav-line-height) * 1em); */
+  margin-top: -0.05em;
+  margin-left: -1.35em; /* calc(var(--nav-line-height) * -1em); */
+}
+
+.nav-item.is-active > .nav-item-toggle {
+  transform: rotate(90deg);
+}
+
+.is-current-page > .nav-link,
+.is-current-page > .nav-text {
+  font-weight: 600; /* var(--body-font-weight-bold); */
 }
