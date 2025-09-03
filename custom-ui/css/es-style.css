@@ -371,3 +371,84 @@ nav.pagination .next a::after {
 .is-current-page > .nav-text {
   font-weight: 600; /* var(--body-font-weight-bold); */
 }
+
+.page .admonitionblock {
+  max-width: 40rem;
+  margin: 1.4rem auto 0 auto;
+}
+
+.page .admonitionblock td.content > :not(.title):first-child,
+.page .admonitionblock td.content > .title + * {
+  margin-top: 0;
+}
+
+.page .admonitionblock td.content pre {
+  font-size: 15rem;
+}
+
+.page .admonitionblock > table {
+  table-layout: fixed;
+  position: relative;
+  width: 100%;
+}
+
+.page .admonitionblock td.content {
+  padding: 1rem 1rem 0.75rem;
+  background: #ddd;
+  border-radius: 0.45rem;
+  width: 100%;
+  word-wrap: anywhere;
+}
+
+.page .admonitionblock td.icon {
+  font-size: 80%;
+  left: 0;
+  line-height: 1;
+  position: absolute;
+  top: 0;
+  transform: translate(-0.5rem, -50%);
+}
+
+.page .admonitionblock td.icon i {
+  align-items: center;
+  border-radius: 0.45rem;
+  display: inline-flex;
+  filter: initial;
+  height: 1.25rem;
+  padding: 0.5rem;
+  vertical-align: initial;
+  width: fit-content;
+}
+
+.page .admonitionblock td.icon i::after {
+  content: attr(title);
+  font-family: expo-sans-pro,sans-serif;
+  font-size: 80%;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.page .admonitionblock td.icon i.icon-caution {
+  background-color: var(--caution-color);
+  color: var(--caution-on-color);
+}
+
+.page .admonitionblock td.icon i.icon-important {
+  background-color: var(--important-color);
+  color: var(--important-on-color);
+}
+
+.page .admonitionblock td.icon i.icon-note {
+  background-color: #217ee7;
+  color: white;
+}
+
+.page .admonitionblock td.icon i.icon-tip {
+  background-color: var(--tip-color);
+  color: var(--tip-on-color);
+}
+
+.page .admonitionblock td.icon i.icon-warning {
+  background-color: var(--warning-color);
+  color: var(--warning-on-color);
+}

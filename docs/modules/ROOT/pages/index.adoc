@@ -5,11 +5,11 @@
 
 *Hi, I'm Eric.* I've been https://ericscouten.dev/about/[writing code for a few decades now] and as you might expect from somebody who's done this for a while, I have some habits, some ways that I _think_ about writing code.
 
-I suppose this site could be called _How I *Think* About Code,_ but that title wouldn't be as pithy.
-
 I'm sharing these thoughts as much as anything as a thought exercise in formalizing things I've been thinking about for a while. My intent isn't to be preachy, but rather to spark some discussion and thought on your part about your own approach to coding.
 
 For the last few years, I've been writing primarily in the https://www.rust-lang.org[Rust programming language], so my examples will be almost exclusively in Rust. If you write in a different language, you might find some things that apply and some that don't. No worries; it's all good.
+
+NOTE: I suppose this site could be called _How I *Think* About Code,_ but that title wouldn't be as pithy.
 
 == Navigating
 
