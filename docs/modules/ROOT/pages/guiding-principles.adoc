@@ -1,7 +1,7 @@
 = Guiding principles
 
 On this page, I'll attempt to capture some of the big-picture ideas that inform the more specific ideas that I present on subsequent pages.
-These are my North Star(s) -- what I think is most important, regardless of the environment I'm in.
+These are my North Stars -- what I think is most important, regardless of the environment I'm in.
 
 [#consistent]
 == Be consistent
