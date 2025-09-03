@@ -100,6 +100,42 @@ cta h2, cta h3, cta h4 {
     padding-top: .2em;
 }
 
+/* Doc anchor link from Antora default UI -- Add to Zola? */
+.page h1 .anchor,
+.page h2 .anchor,
+.page h3 .anchor,
+.page h4 .anchor,
+.page h5 .anchor,
+.page h6 .anchor {
+  position: absolute;
+  text-decoration: none;
+  width: 1.75ex;
+  margin-left: -1.5ex;
+  visibility: hidden;
+  font-size: 0.8em;
+  font-weight: normal;
+  padding-top: 0.05em;
+}
+
+.page h1 .anchor::before,
+.page h2 .anchor::before,
+.page h3 .anchor::before,
+.page h4 .anchor::before,
+.page h5 .anchor::before,
+.page h6 .anchor::before {
+  font-size: 1.2rem;
+  content: "\00a7";
+}
+
+.page h1:hover .anchor,
+.page h2:hover .anchor,
+.page h3:hover .anchor,
+.page h4:hover .anchor,
+.page h5:hover .anchor,
+.page h6:hover .anchor {
+  visibility: visible;
+}
+
 /* Pagination adapted from Antora default UI -- Add to Zola template? */
 nav.pagination {
     font-family: expo-sans-pro,sans-serif;
