@@ -186,10 +186,6 @@ nav.pagination .next a::after {
   visibility: hidden;
 }
 
-.nav-container .title, .nav-container .title a {
-  color: #888;
-}
-
 @media screen and (min-width: 769px) {
   .nav-container {
     width: calc(8vw + 5rem); /* var(--nav-width); */
@@ -313,7 +309,7 @@ nav.pagination .next a::after {
 }
 
 .nav-menu h3.title {
-  color: #424242; /* var(--nav-heading-font-color); */
+  color: #888;
   font-size: inherit;
   font-weight: 600; /* var(--body-font-weight-bold); */
   margin: 0;
