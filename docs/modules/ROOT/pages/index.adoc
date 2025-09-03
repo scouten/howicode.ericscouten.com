@@ -1,4 +1,5 @@
 = How I Code
+:page-disable-breadcrumbs:
 :page-disable-comments:
 :page-disable-date:
 

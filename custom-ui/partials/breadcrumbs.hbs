@@ -1,6 +1,9 @@
 <nav class="breadcrumb has-succeeds-separator" aria-label="breadcrumbs">
   {{#if page.breadcrumbs}}
   <ul>
+  {{#if (exists page.attributes.disable-breadcrumbs)}}
+  &nbsp;
+  {{else}}
   {{#with site.homeUrl}}
     <li><a href="{{{relativize this}}}"><span class="icon is-small"><i class="fas fa-home" aria-hidden="true"></i></span></a>&#8203;</li>
   {{/with}}
@@ -20,6 +23,7 @@
     </li>
     {{/unless}}
     {{/each}}
+    {{/if}}
   </ul>
   {{/if}}
 </nav>
