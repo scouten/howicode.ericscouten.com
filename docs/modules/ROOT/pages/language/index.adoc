@@ -10,7 +10,7 @@ I aspire to craft the English-language part of my coding work as carefully as I 
 
 == Exemplar
 
-I am especially inspired by the quality of documentation found in the https://github.com/rust-lang/rust/tree/master/library[Rust standard library].
+I am especially inspired by the quality of documentation found in the https://github.com/rust-lang/rust/tree/master/library[Rust standard library^].
 It is absolutely consistently formatted, carefully written, and carefully proofread.
 This despite having hundreds of contributors from all over the world, many of whom presumably speak languages other than English as their primary language.
 
