@@ -387,7 +387,7 @@ nav.pagination .next a::after {
 }
 
 .nav-item-toggle {
-  background: transparent url(../img/caret.svg) no-repeat center / 50% 60%;
+  background: transparent url(/_/img/caret.svg) no-repeat center / 50% 60%;
   font-size: 1rem;
   border: none;
   outline: none;
