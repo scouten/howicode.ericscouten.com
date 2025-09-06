@@ -1,0 +1,11 @@
+= Use sentence case
+
+Like many developers and documentation guidelines, I have chosen to use _sentence case_ consistently in most contexts.
+
+The https://learn.microsoft.com/en-us/style-guide/capitalization[_Microsoft Writing Style Guide_ section on capitalization] has largely shaped my own thinking. I'll summarize a few of their key points, which I follow:
+
+* Use sentence-style capitalization most of the time. That means the first word and proper nouns are capitalized; everything else is in lower case.
+* Avoid the use of all upper case words for emphasis.
+* Use title case for proper nouns (names of things).
+
+As an example, I use title case for the name of this site, _How I Code,_ but the title for each page and the section headings within the pages are in sentence case.
