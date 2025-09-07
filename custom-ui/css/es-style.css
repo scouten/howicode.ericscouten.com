@@ -433,7 +433,7 @@ nav.pagination .next a::after {
 }
 
 .page .listingblock {
-  max-width: 45rem;
+  max-width: 46rem;
   margin: 1.4rem auto 0 auto;
 }
 
@@ -441,6 +441,10 @@ nav.pagination .next a::after {
   background: #eee;
   border: 2px solid #ddd;
   border-radius: 0.25em;
+}
+
+.page .listingblock code.hljs {
+  margin: 0;
 }
 
 .page code,
