@@ -499,8 +499,12 @@ nav.pagination .next a::after {
 
 /* Adjust admonition icon and prefer/avoid badge positioning on mobile to prevent clipping */
 @media screen and (max-width: 1023.5px) {
-  .page .admonitionblock td.content {
+  .page .admonitionblock > table {
     position: relative;
+  }
+  
+  .page .admonitionblock td.content {
+    position: static;
   }
   
   .page .admonitionblock td.icon {
@@ -570,8 +574,10 @@ nav.pagination .next a::after {
   color: var(--warning-on-color);
 }
 
-.page .comments {
-  width: 40rem;
+@media screen and (min-width: 1024px) {
+  .page .comments {
+    width: 40rem;
+  }
 }
 
 .page .listingblock.prefer .content,
