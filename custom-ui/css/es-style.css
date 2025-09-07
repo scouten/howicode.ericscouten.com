@@ -205,6 +205,11 @@ nav.pagination .next a::after {
     content: "\203a";
 }
 
+/* Top-align pagination links when they have different heights */
+nav.pagination {
+  align-items: flex-start;
+}
+
 /* TOC menu */
 @media screen and (max-width: 1023.5px) {
   html.is-clipped--nav {
