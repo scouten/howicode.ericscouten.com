@@ -3,9 +3,9 @@
 Maybe it's because I'm of a certain generation (old enough to have been writing code for decades).
 Maybe it's because I'm the son of an English teacher.
 
-But I _admire and value_ well-crafted written language. 
+But I _admire and value_ well-crafted language. 
 
-I view the quality of English written language in a body of code as an important signal of the authors`' attention to detail.
+I view the quality of written language in a body of code as an important signal of the authors`' attention to detail.
 I aspire to craft the English-language part of my coding work as carefully as I do the machine-readable parts.
 
 == Exemplar

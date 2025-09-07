@@ -26,4 +26,4 @@ let replacer = PassthroughRestoreReplacer(self.0, self.1);
 
 As you'll see throughout this site, I don't jump through hoops to make section titles and captions into complete sentences.
 Where they make sense -- as, for example, the title of this page, “Use complete sentences” -- I will do so.
-Either way, I almost always format titles and captions xref:sentence-case.adoc[using sentence case].
+Either way, I almost always format titles and captions xref:language/sentence-case.adoc[using sentence case].
