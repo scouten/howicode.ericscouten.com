@@ -40,6 +40,7 @@ h1, h2, h3, h4, h5, h6 {
   }
 
   .container > .page {
+    margin: 0 1rem;
     overflow-x: auto;
   }
 }
@@ -494,6 +495,35 @@ nav.pagination .next a::after {
   position: absolute;
   top: 0;
   transform: translate(-0.5rem, -50%);
+}
+
+/* Adjust admonition icon and prefer/avoid badge positioning on mobile to prevent clipping */
+@media screen and (max-width: 1023.5px) {
+  .page .admonitionblock td.content {
+    position: relative;
+  }
+  
+  .page .admonitionblock td.icon {
+    position: absolute !important;
+    left: 0.75rem !important;
+    top: 0 !important;
+    transform: translateY(-50%) !important;
+    z-index: 10;
+    width: auto !important;
+  }
+  
+  .page .listingblock.prefer .content::before,
+  .page .listingblock.avoid .content::before {
+    position: absolute !important;
+    left: 0.75rem !important;
+    top: 0 !important;
+    transform: translateY(-50%) !important;
+  }
+  
+  .page .listingblock.prefer .content,
+  .page .listingblock.avoid .content {
+    margin-top: 0.75rem;
+  }
 }
 
 .page .admonitionblock td.icon i {
