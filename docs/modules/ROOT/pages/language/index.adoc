@@ -8,9 +8,9 @@ But I _admire and value_ well-crafted language.
 I view the quality of written language in a body of code as an important signal of the authors`' attention to detail.
 I aspire to craft the English-language part of my coding work as carefully as I do the machine-readable parts.
 
-== Exemplar
+== Exemplar: Rust standard library
 
-I am especially inspired by the quality of documentation found in the https://github.com/rust-lang/rust/tree/master/library[Rust standard library^].
+I am inspired by the quality of documentation found in the https://github.com/rust-lang/rust/tree/master/library[Rust standard library^].
 It is absolutely consistently formatted, carefully written, and carefully proofread.
 This despite having hundreds of contributors from all over the world, many of whom presumably speak languages other than English as their primary language.
 

@@ -14,10 +14,10 @@ As an example, I use title case for the name of this site, _How I Code,_ but the
 [#upper-case-admonitions]
 == Exception: Use all capitals for admonitions
 
-I make one exception to the “avoid use of all upper case words ...” guideline for admonitions.
+I make one exception to the “avoid use of all upper case words ...” guideline for _admonitions_.
 Admonitions are things like TEMPORARY, WARNING, NOTE, etc. that preface a specific category of content.
 
-You'll notice that I use all-capital (albeit sized smaller than most other text) when styling this site, as in the following examples:
+You'll notice that I use all capitals (albeit in sized smaller than most other text) when styling this site, as in the following examples:
 
 .Admonition in all caps
 [source.prefer,rust]
