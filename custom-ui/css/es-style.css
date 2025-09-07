@@ -443,6 +443,14 @@ nav.pagination .next a::after {
   border-radius: 0.25em;
 }
 
+.page .listingblock.prefer .content {
+  border-color: #60bf64;
+}
+
+.page .listingblock.avoid .content {
+  border-color: #ff8080;
+}
+
 .page .listingblock code.hljs {
   margin: 0;
 }
@@ -534,4 +542,42 @@ nav.pagination .next a::after {
 
 .page .comments {
   width: 40rem;
+}
+
+.page .listingblock.prefer .content,
+.page .listingblock.avoid .content {
+  margin-top: .75rem;
+  position: relative;
+}
+
+.page .listingblock.prefer .content::before,
+.page .listingblock.avoid .content::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(-0.5rem, -50%);
+  z-index: 10;
+  font-family: expo-sans-pro, sans-serif;
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: 0.5rem;
+  border-radius: 0.45rem;
+  line-height: 1;
+  height: 1.25rem;
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+}
+
+.page .listingblock.prefer .content::before {
+  content: "Prefer";
+  background-color: #2e7d32;
+  color: white;
+}
+
+.page .listingblock.avoid .content::before {
+  content: "Avoid";
+  background-color: #d32f2f;
+  color: white;
 }
