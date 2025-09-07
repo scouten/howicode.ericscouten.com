@@ -414,6 +414,44 @@ nav.pagination .next a::after {
   margin: 1.4rem auto 0 auto;
 }
 
+.page .admonitionblock .title,
+.page .exampleblock .title,
+.page .imageblock .title,
+.page .literalblock .title,
+.page .listingblock .title,
+.page .openblock .title,
+.page .videoblock .title,
+.page table.tableblock caption {
+  color: #555;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  hyphens: none;
+  margin-top: 3rem;
+  margin-bottom: 0.25rem;
+  padding-bottom: 0.075rem;
+}
+
+.page .listingblock {
+  max-width: 45rem;
+  margin: 1.4rem auto 0 auto;
+}
+
+.page .listingblock .content {
+  background: #eee;
+  border: 2px solid #ddd;
+  border-radius: 0.25em;
+}
+
+.page code,
+.page kbd,
+.page pre {
+  font-family: "fira-code", monospace;
+  font-size: 0.9em;
+  padding: 0.25em 0.5em;
+  hyphens: none;
+}
+
 .page .admonitionblock td.content > :not(.title):first-child,
 .page .admonitionblock td.content > .title + * {
   margin-top: 0;
