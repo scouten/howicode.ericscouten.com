@@ -1,0 +1,27 @@
+= Use complete sentences
+
+When possible (and it's possible most of the time), write in complete sentences.
+
+This applies in almost all contexts with a few specific adaptations.
+
+== Comments
+
+I almost always write comments in complete sentences with sentence-style punctuation.
+
+.Comments in complete sentences
+[source.prefer,rust]
+----
+// Recursively apply passthrough replacement and write the result.
+let replacer = PassthroughRestoreReplacer(self.0, self.1);
+----
+
+.Comments not formatted as a sentence
+[source.avoid,rust]
+----
+// recursively apply passthrough replacement and write the result
+let replacer = PassthroughRestoreReplacer(self.0, self.1);
+----
+
+== Section titles and captions
+
+(TO DO: Write about how these are sentence case, but without a period to end the sentence.)

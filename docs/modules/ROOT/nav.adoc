@@ -2,4 +2,5 @@
 * xref:guiding-principles.adoc[]
 * xref:language/index.adoc[]
 ** xref:language/sentence-case.adoc[]
+** xref:language/complete-sentences.adoc[]
 * xref:site-credits.adoc[]

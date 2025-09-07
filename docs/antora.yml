@@ -8,6 +8,10 @@ nav:
 
 asciidoc:
   attributes:
+    example-caption: 'Example'
+    example-number: 1
+    listing-caption: Example@
     page-pagination: ''
     page-hyvor-talk-id: 14038
     page-cta-site-id: "how-i-code"
+    source-language: rust@
