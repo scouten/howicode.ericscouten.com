@@ -1,23 +1,23 @@
-= Use sentence case
+= I use sentence case
 
-Like many developers and documentation guidelines, I have chosen to use _sentence case_ consistently in most contexts.
+Like a lot of developers (and style guides), I stick with _sentence case_ for most of my writing.
 
-The https://learn.microsoft.com/en-us/style-guide/capitalization[_Microsoft Writing Style Guide_ section on capitalization^] has largely shaped my own thinking.
-I'll summarize a few of their key points, which I follow:
+I've been influenced by the https://learn.microsoft.com/en-us/style-guide/capitalization[_Microsoft Writing Style Guide_ section on capitalization^], which has some great advice.
+Here are the main points I follow:
 
-* Use sentence-style capitalization most of the time. That means the first word and proper nouns are capitalized; everything else is in lower case.
-* Avoid the use of all upper case words for emphasis. _(Except: See <<upper-case-admonitions>>.)_
-* Use title case for proper nouns (names of things).
+* Most of the time, I capitalize like a regular sentence: The first word and proper nouns get capitals; everything else stays lowercase.
+* I avoid ALL CAPS for emphasis. _(Though I do make an exception for admonitions -- see <<upper-case-admonitions>>.)_
+* I use title case for proper nouns (actual names of things).
 
-As an example, I use title case for the name of this site, _How I Code,_ but the title for each page and the section headings within the pages are in sentence case.
+For example, this site's name is _How I Code_ (title case), but individual page titles and section headings are in sentence case.
 
 [#upper-case-admonitions]
-== Exception: Use all capitals for admonitions
+== Exception: All capitals for admonitions
 
-I make one exception to the “avoid use of all upper case words ...” guideline for _admonitions_.
-Admonitions are things like TEMPORARY, WARNING, NOTE, etc. that preface a specific category of content.
+I do make one exception to my “no ALL CAPS” rule: _admonitions_.
+Those are things like FIXME, WARNING, NOTE, etc. -- words that flag specific types of content.
 
-You'll notice that I use all capitals (albeit in sized smaller than most other text) when styling admonitions on this site, as in the following examples:
+I use all capitals for these (in a smaller font size, where possible) to make them stand out, like in the labels for these examples:
 
 .Admonition in all caps
 [source.prefer,rust]

@@ -1,50 +1,52 @@
 = Guiding principles
 
-On this page, I'll attempt to capture some of the big-picture ideas that inform the more specific ideas that I present on subsequent pages.
-These are my North Stars -- what I think is most important, regardless of the environment I'm in.
+I thought it might be helpful to share some of the big-picture ideas that guide how I think about code.
+These are my North Stars — the things that matter most to me, no matter what project I'm working on or what language I'm using.
 
 [#consistent]
-== Be consistent
+== I try to be consistent
 
-If you do something one way in one place, do it the same way in _all_ the places.
-Choose a style and stick to it.
-There are exceptions, of course, and you'll find some in this style guide.
+This one's pretty simple: If I do something one way in one place, I try to do it the same way everywhere else.
+I pick a style and stick with it.
+Now, there are definitely exceptions (you'll see some as we go), but consistency is usually a good default.
 
 [#fit-in]
-== Fit in
+== I try to fit in
 
-Your code should fit comfortably within the project or language community in which you are working.
-Learn the “house rules” where you are working and follow that style as best you can.
-If the house rules aren't comfortable, advocate for change, but be prepared to accept a consensus that doesn't agree with your personal style.
-If the house rules are ambiguous or not stated on a particular topic, lead by example.
+I think code should feel like it belongs in the project and community where it lives.
+When I join a new team or contribute to an open source project, I spend time learning the “house rules” and try to match the existing style.
+If something feels off about those rules, I might suggest changes, but I'm also okay with the team deciding to stick with their current approach.
+And when the rules are unclear? That's a great opportunity to lead by example.
 
-IMPORTANT: If you're planning to contribute to a project where I am the lead or primary developer, this site describes the house rules.
+IMPORTANT: By the way, if you're thinking about contributing to one of my projects, this site describes my house rules.
 
 [#legibility]
-== Favor legibility
+== I favor legibility
 
-Think carefully about the future readers of your code.
-That might be future you, but it could also be somebody who doesn't have the experience or context that you do when you were writing the code.
+I'm always thinking about who's going to read my code later.
+Sometimes that's future me (who might have forgotten all the context), but it could also be a teammate, a new contributor, or someone who's still learning the language or domain.
 
 [#dont-be-clever]
-== Don't be clever
+== I try not to be clever
 
-If there's a “clever” way to do something and a legible/comprehensible way to do something, favor the legible way unless you can articulate a meaningful benefit to being clever.
+When I'm faced with a “clever” solution versus a straightforward one, I usually go with straightforward.
+The clever approach might be shorter or feel more elegant, but if I can't clearly explain why it's worth the extra mental overhead, I stick with the obvious approach.
 
 [#proofread]
-== Proofread carefully
+== I proofread carefully
 
-The quality of your written word is easily interpreted as a signal of the quality of the overall work.
-Invest in well-written language: It's a sales pitch for your work.
+Maybe it's just me, but I think the quality of comments and documentation says a lot about the overall attention to detail in a codebase.
+Well-written language is kind of like good UI design -- it makes everything feel more polished and trustworthy.
 
 [#make-it-small]
-== Make it as small as possible
+== I like small things
 
-Whether you're talking about a function, a data structure, or a larger concept such as a module or a crate, always look for ways to make the thing smaller.
-Favor having lots of small things over a few big things.
+Whether it's a function, a struct, a module, or an entire crate, I'm always looking for ways to make things smaller.
+I'd rather have a bunch of small, focused pieces than a few large, complex ones.
+Smaller things are just easier to understand, test, and change.
 
 [#one-thing]
-== Make it do one thing
+== I like things that do one thing
 
-Related to <<make-it-small>>, avoid mixing purposes in any concept.
-If you find yourself describing the thing (again: function, data structure, module, etc.) using the word “and,” consider whether you can divide the thing into two or more peers that each do one thing.
+This goes hand-in-hand with keeping things small: I try to avoid mixing different purposes in the same function, struct, module, whatever.
+If I catch myself describing something with the word “and” (like “this function parses the input and also validates it and formats the output”), that's usually a sign I should split it up.

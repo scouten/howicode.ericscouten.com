@@ -1,19 +1,19 @@
 = Language matters
 
-Maybe it's because I'm of a certain generation (old enough to have been writing code for decades).
-Maybe it's because I'm the son of an English teacher.
+Maybe it's because I'm old enough to have been writing code for decades.
+Maybe it's because my mom was an English teacher.
 
-But I _admire and value_ well-crafted language. 
+But I really appreciate well-crafted language.
 
-I view the quality of written language in a body of code as an important signal of the authors`' attention to detail.
-I aspire to craft the English-language part of my coding work as carefully as I do the machine-readable parts.
+When I'm reading through a codebase, the quality of the comments and documentation tells me a lot about how much care went into the project.
+I try to put the same attention into the English parts of my code as I do into the logic itself.
 
-== Exemplar: Rust standard library
+== What good looks like: Rust standard library
 
-I am inspired by the quality of documentation found in the https://github.com/rust-lang/rust/tree/master/library[Rust standard library^].
-It is absolutely consistently formatted, carefully written, and carefully proofread.
-This despite having hundreds of contributors from all over the world, many of whom presumably speak languages other than English as their primary language.
+I'm constantly impressed by the documentation in the https://github.com/rust-lang/rust/tree/master/library[Rust standard library^].
+It's remarkably consistent -- well-written, carefully formatted, and clearly proofread.
+What's amazing is that this comes from hundreds of contributors from all around the world, many of whom probably don't speak English as their first language.
 
-== Specific guidelines
+== My specific habits
 
-Some specific guidelines that I observe are on the following pages ...
+Here are some of the specific things I do when writing documentation and comments ...

@@ -3,10 +3,10 @@
 :page-disable-comments:
 :page-disable-date:
 
-*Hi, I'm Eric.* I've been https://ericscouten.dev/about/[writing code for a few decades now] and as you might expect from somebody who's done this for a while, I have some habits, some ways that I _think_ about writing code.
+*Hi, I'm Eric.* I've been https://ericscouten.dev/about/[writing code for a few decades now] and, like most people who've been at this for a while, I've developed some habits and ways of thinking about code.
 
-I'm sharing these thoughts as much as anything as a thought exercise in formalizing things I've been thinking about for a while.
-My intent isn't to be preachy, but rather to spark some discussion and thought on your part about your own approach to coding.
+Honestly, I'm sharing these thoughts as much for myself as for you -- it's been a fun exercise trying to put into words things I've been doing intuitively for years.
+I'm not trying to tell you how you should code (that would be kind of presumptuous!), but maybe some of these ideas will resonate with you or get you thinking about your own approach.
 
 For the last few years, I've been writing primarily in the https://www.rust-lang.org[Rust programming language], so my examples will be almost exclusively in Rust.
 If you write in a different language, you might find some things that apply and some that don't. No worries; it's all good.
@@ -15,6 +15,6 @@ NOTE: I suppose this site could be called _How I *Think* About Code,_ but that t
 
 == Navigating
 
-There's a sequence to these pages, which you can follow via the “Next” and “Previous” links at the bottom of each page.
-Or you can skip around via the table of contents which appears on the left for desktop-sized screens.
-Hope you enjoy some of this, however you approach it.
+I've arranged these pages in a loose sequence that you can follow using the “Next” and “Previous” links at the bottom of each page.
+That said, feel free to jump around. There's a table of contents on the left (if you're on a bigger screen) that'll help you find whatever catches your interest.
+I hope you find something useful here, however you choose to explore!
