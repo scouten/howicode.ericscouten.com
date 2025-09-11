@@ -6,9 +6,9 @@ Maybe it's because my mom was an English teacher.
 But I really appreciate well-crafted language.
 
 When I'm reading through a codebase, the quality of the comments and documentation tells me a lot about how much care went into the project.
-I try to put the same attention into the English parts of my code as I do into the logic itself.
+I try to put the same attention into the English-language parts of my code as I do into the logic itself.
 
-== What good looks like: Rust standard library
+== What good looks like: The Rust standard library
 
 I'm constantly impressed by the documentation in the https://github.com/rust-lang/rust/tree/master/library[Rust standard library^].
 It's remarkably consistent -- well-written, carefully formatted, and clearly proofread.
