@@ -575,8 +575,8 @@ nav.pagination {
 }
 
 .page .admonitionblock td.icon i.icon-tip {
-  background-color: var(--tip-color);
-  color: var(--tip-on-color);
+  background-color: #2e7d32;
+  color: white;
 }
 
 .page .admonitionblock td.icon i.icon-warning {
