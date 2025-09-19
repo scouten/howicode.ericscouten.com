@@ -1,0 +1,38 @@
+= How I use Git
+
+Like almost everybody these days, I keep my source code in https://git-scm.com[Git] (including https://github.com/scouten/howicode.ericscouten.com[this web site]).
+
+Here are a few Git-related habits I've developed over time that work well for me:
+
+== I like Conventional Commits
+
+I've gotten into the habit of using https://www.conventionalcommits.org/en/v1.0.0/[Conventional Commits] syntax in most of my projects.
+It plays nicely with the release automation tools I use, and I find the structured format makes it easier to write good commit messages.
+
+For commit titles, I follow the same approach I mentioned in xref:language/complete-sentences.adoc#exception-titles-and-captions[Titles and captions] -- they don't need to be complete sentences.
+
+== I prefer squash commits
+
+In most of my projects (websites are generally an exception), I do my work in pull requests.
+I'm pretty heavy on automation (maybe I'll write about that someday), and PRs give me a chance to see how my changes will behave before they hit the `main` branch.
+
+When I merge a pull request, I almost always use a squash commit.
+Honestly, I find all those intermediate “fix typo” and “address review comments” commits just add noise to the history.
+
+TIP: Don't worry -- GitHub keeps all those individual commits around even after you squash a pull request.
+You can always un-delete the pull request branch if you need to dig into what happened during development.
+I've found it reassuring to know that safety net exists, even though I've rarely needed to use it.
+
+== Exceptions: When I don't squash
+
+There are a few cases where I skip the squash and do a regular merge instead:
+
+* Long-running maintenance or release branches that need to stay in sync with `main` -- those get merged with a merge commit to preserve the commit history and any release tags that might have been added along the way.
+* When I'm pulling in commits from another project that I track over time, like in my https://github.com/scouten/asciidoc-parser[`asciidoc-parser` project] where I want to keep a clear connection to the upstream project.
+
+== I keep source code and build artifacts separate
+
+I've found it's cleaner to think of Git repos as being one of two things: either source code (the recipe) or the finished product (what I'm building) — but not both at once.
+Whenever possible, I avoid setups where build artifacts get committed back into the same repo as the code that created them.
+
+Take this website as an example: the https://github.com/scouten/howicode.ericscouten.com[GitHub repo] contains all of the https://docs.asciidoctor.org/asciidoc/latest/[Asciidoc] source files and the https://antora.org[Antora] configuration, but the actual HTML, CSS, and JavaScript that make up the live site? Those get built and published separately.
