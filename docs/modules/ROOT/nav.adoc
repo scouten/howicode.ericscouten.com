@@ -3,4 +3,5 @@
 * xref:language/index.adoc[]
 ** xref:language/sentence-case.adoc[]
 ** xref:language/complete-sentences.adoc[]
+** xref:language/acronyms.adoc[]
 * xref:site-credits.adoc[]

@@ -1,0 +1,55 @@
+= I'm careful with acronyms
+
+I pay attention to how acronyms and proper names are actually used in common English.
+
+Most of the acronyms we use in tech are solid caps, so I use them that way in comments and documentation.
+
+.Acronyms follow common capitalization
+[source.prefer,rust]
+----
+// Read the XMP from this file.
+----
+
+.Acronyms are written in lower-case
+[source.avoid,rust]
+----
+// Read the xmp from this file.
+----
+
+But some acronyms aren't solid caps, and I try to use them the way their creators intended.
+For example, I work in digital imaging where https://en.wikipedia.org/wiki/Exif[Exif] is commonly written incorrectly.
+
+.Unusual acronyms follow their convention
+[source.prefer,rust]
+----
+// Read the Exif from this file.
+----
+
+.Unusual acronyms capitalized despite common convention
+[source.avoid,rust]
+----
+// Read the EXIF from this file.
+----
+
+== Exception: Identifier names follow the language convention
+
+Following the precedent I set in xref:guiding-principles.adoc#fit-in[I try to fit in], I make an exception for identifiers in code.
+When the language has its own conventions for handling acronyms, I go with those instead.
+
+In Rust, for example, this means camel-case and snake-case conventions win out.
+
+.Identifier follows Rust convention
+[source.prefer,rust]
+----
+struct XmpFileReader {
+    // ...
+}
+----
+
+.Identifier in all caps despite language convention
+[source.avoid,rust]
+----
+struct XMPFileReader {
+    // ...
+}
+----
