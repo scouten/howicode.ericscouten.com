@@ -4,5 +4,8 @@
 ** xref:language/sentence-case.adoc[]
 ** xref:language/complete-sentences.adoc[]
 ** xref:language/acronyms.adoc[]
+* xref:credit-cards/index.adoc[]
+** xref:credit-cards/code-coverage.adoc[]
+** xref:credit-cards/strongly-typed.adoc[]
 * xref:git.adoc[]
 * xref:site-credits.adoc[]

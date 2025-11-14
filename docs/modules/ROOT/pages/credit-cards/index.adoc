@@ -1,0 +1,9 @@
+= Use credit cards wisely
+
+Just as in real life, credit cards can make important things happen quickly -- but they can also create substantial ongoing costs if overused.
+
+I don't believe there's a universally correct answer as to how much credit -- or, in this instance, *tech debt* -- is too little or too much, but I think it's wise to be _intentional_ about the tradeoffs you have to make in building any project.
+There are cases where moving quickly makes sense and cases where being more deliberate makes sense.
+
+I'll share my thoughts about some tech debt tradeoffs on the next few pages.
+I tend to think mostly about how to build long-lasting, sustainable projects, but I'll note cases where one might make a different choice for a short-lived proof-of-concept project.

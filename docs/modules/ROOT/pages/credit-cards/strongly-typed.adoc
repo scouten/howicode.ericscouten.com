@@ -1,0 +1,19 @@
+= Prefer strongly-typed languages
+
+Another potentially-controversial hot take: _Strongly-typed languages are a key investment in making a project sustainable._
+
+I've been a key contributor to projects written in both strongly-typed and weakly-typed languages.
+Having lived both experiences, I am now firmly in the strongly-typed camp.
+
+To be sure, there's more friction to writing in a strongly-typed language.
+You spend more time fighting with the compiler.
+But that's because it's spotting -- and preventing -- potential flaws in your project.
+
+When I've written code in weakly-typed languages, I've found that developers
+(a) make up for the lack of type checking with defensive coding practices,
+(b) ignore the risks of unexpected types flowing through the system, or
+(c) a haphazard combination of both approaches.
+
+The defensive coding approach leads to runtime costs that are avoided in a strongly-typed language environment; the ignoring-the-risks approach leads to runtime failure modes that could have been avoided.
+
+In my opinion, the early initial gains in productivity from weakly-typed languages are only valuable for short-lived, proof-of-concept projects.

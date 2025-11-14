@@ -1,0 +1,28 @@
+= Invest in test automation
+
+My potentially-controversial hot take:
+_Code that isn't well-tested is debt on a high-interest credit card._
+
+Or ... put another way:
+_What you don't test, you will 🤬 up._
+
+It is very tempting to write code, see that it works today, check it in, and move on to the next thing.
+If you're moving quickly for a proof-of-concept, that can make a lot of sense.
+
+But I think mostly about how to build projects that are long-lasting and sustainable.
+I've seen too many projects become brittle and unmaintainable as developers on the the project begin to fear making changes that have unintended consequences.
+
+In other words, the credit card bill is coming due and the project can no longer pay it.
+
+So I take a view that is sometimes contrarian:
+*You can't have too much test coverage.*
+
+One of the first things I do when starting a new project is to set up a code coverage tool.
+My current favorite is https://about.codecov.io[CodeCov], which has a very nice set of integrations with GitHub.
+I look closely at the coverage report for any change I'm proposing and I spend a lot of time ensuring that the seemingly-obscure edge cases are covered.
+This leads me to very high code coverage numbers. I'll cite two projects:
+
+* https://app.codecov.io/gh/adobe/xmp-toolkit-rs[`xmp-toolkit-rs`] (a Rust-language wrapper for Adobe's C++ XMP Toolkit), which as of this writing has 97.9% coverage.
+* https://app.codecov.io/gh/scouten/asciidoc-parser?components%5B0%5D=Parser%20test%20coverage[`asciidoc-parser`] (a pure Rust parser for the https://docs.asciidoctor.org/asciidoc/latest/[Asciidoc language]), which as of this writing has 99.7% coverage for the parser core.
+
+Those are really high numbers, but they help to ensure that I don't get called back to fix bugs that I could have anticipated and didn't think to test.
