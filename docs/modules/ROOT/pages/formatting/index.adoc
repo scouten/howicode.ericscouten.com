@@ -1,0 +1,10 @@
+= Consistency in formatting
+
+I care a lot about how my code looks on the screen.
+
+Maybe that sounds superficial, but hear me out:
+Code is read far more often than it's written.
+When formatting is consistent and intentional, it becomes easier to spot the meaningful parts of the code -- and, importantly, to notice when something doesn't fit.
+
+As I work on a project, I look for ways to make the formatting consistent and predictable.
+I'll share some of my specific habits on the next few pages.

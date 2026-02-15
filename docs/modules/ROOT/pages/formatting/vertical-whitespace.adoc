@@ -1,0 +1,83 @@
+= Use vertical whitespace intentionally
+
+Blank lines are free. I use them liberally.
+
+A blank line is a visual signal that says “this is a new thought” or “we're moving on to a different concern.”
+When I'm reading code, those signals help me chunk the logic into manageable pieces.
+
+== Separating logical sections
+
+Within a function, I use blank lines to separate distinct steps or phases.
+For example:
+
+[source,rust]
+----
+pub fn process_document(input: &str) -> Result<Document> {
+    // Parse the raw input.
+    let tokens = tokenize(input)?;
+    let ast = parse_tokens(&tokens)?;
+
+    // Apply transformations.
+    let ast = resolve_includes(ast)?;
+    let ast = expand_macros(ast)?;
+
+    // Generate the output.
+    let document = render(ast)?;
+    Ok(document)
+}
+----
+
+Each blank line marks a transition: from parsing to transforming to rendering.
+Without those blank lines, the code would feel like a wall of text.
+
+I like to group comments with the code they're describing, as shown above.
+
+== Around multi-line statements
+
+When the formatter wraps a statement across multiple lines, that statement becomes visually “heavier.”
+I usually add a blank line before and after it to give it room to breathe.
+
+[source,rust]
+----
+let config = load_config()?;
+
+let result = some_function_with_a_long_name(
+    first_argument,
+    second_argument,
+    third_argument,
+)?;
+
+process_result(&result);
+----
+
+The exception: if there's a single line that closely relates to the multi-line statement, I'll keep them together.
+
+[source,rust]
+----
+let options = default_options();
+let result = some_function_with_a_long_name(
+    first_argument,
+    second_argument,
+    options,
+)?;
+
+do_something_else();
+----
+
+Here, `options` is directly consumed by the next statement, so it makes sense to keep them visually connected.
+
+== Between struct fields and impl blocks
+
+I also use blank lines to visually group related fields in a struct, or to separate different “categories” of methods in an `impl` block.
+
+This is a matter of taste, of course.
+Some people prefer denser code; I prefer a bit of breathing room.
+
+== The key: Be intentional
+
+The important thing is to use whitespace _intentionally._
+If every line has a blank line after it, that's just noise.
+If blank lines appear at meaningful boundaries, they become a useful visual cue.
+
+I think of it like paragraphs in prose:
+You don't start a new paragraph after every sentence, but you do when you're shifting to a new idea.
