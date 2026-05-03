@@ -12,5 +12,6 @@
 * xref:formatting/index.adoc[]
 ** xref:formatting/code-formatters.adoc[]
 ** xref:formatting/vertical-whitespace.adoc[]
+** xref:formatting/avoid-decorations.adoc[]
 * xref:git.adoc[]
 * xref:site-credits.adoc[]

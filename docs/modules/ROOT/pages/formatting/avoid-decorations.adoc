@@ -1,0 +1,71 @@
+= Avoid source code decorations
+
+Every so often I'll open a file and find something like this near the top:
+
+[source.avoid,rust]
+----
+// ---------------------------------------------------------------------------
+// Parser
+// ---------------------------------------------------------------------------
+
+pub struct Parser {
+    // ...
+}
+----
+
+Or a row of `=====` signs separating one chunk of a file from the next.
+Or a banner comment that says `// -- Helpers --` immediately above a function called `helper_for_something`.
+
+I avoid all of these.
+
+== What I mean by “decorations”
+
+I'm talking about comments and ASCII art whose only job is to draw the eye -- not to convey information that isn't already in the code.
+A few common forms:
+
+* Long lines of `//`, `--`, `==`, or `*` used as visual separators between sections.
+* Banner comments that restate the name of the thing immediately below them (`// -- Parser --` right before `pub struct Parser`).
+* Boxed headers built out of `+--------+` characters.
+* Decorative ASCII flourishes around a module-level doc comment.
+
+Each of these takes up vertical space, adds noise to diffs, and -- crucially -- tells me nothing I couldn't have learned by glancing at the next line of actual code.
+
+== Why I leave them out
+
+*The structure is already in the code.*
+A modern editor knows where every type, function, and `impl` block begins.
+Symbol outlines, fuzzy file pickers, “go to symbol,” and tree-sitter-aware navigation have all made banner comments obsolete as a wayfinding tool.
+If I want to jump to the parser, I ask the editor to take me there; I don't scroll until I see a row of dashes.
+
+*Decorations rot.*
+Code moves around.
+Sections get split, merged, or renamed.
+The banner that said `// -- Parser --` stays put long after the parser has been pulled into its own module, and now it's actively misleading.
+Plain code can't lie about what it is; a decorative comment can.
+
+*They make diffs noisier.*
+Reformatting a banner -- adding a dash, lining up a column -- shows up as a change in code review even though nothing about the program has changed.
+I'd rather spend review attention on things that matter.
+
+*They substitute for real structure.*
+If a file is long enough that I feel the urge to draw lines across it, that's a signal the file wants to be split.
+A banner comment papers over the problem; a new module solves it.
+
+== What I do instead
+
+* *Let module and file boundaries do the separating.* If two sections of a file feel like they want a wall between them, that wall is usually a `mod` or a new file.
+
+* *Use a single blank line between top-level items.* That's enough visual breathing room. (See xref:formatting/vertical-whitespace.adoc[the previous page] for more on how I use blank lines.)
+
+* *Write doc comments, not banners.* If a type or function deserves a header, it deserves a `///` doc comment that explains what it _does_, not a row of dashes that announces its name.
+
+* *Trust the reader's tools.* Anyone reading my code has an editor at least as capable as mine. I don't need to hand-draw a table of contents into the source file.
+
+== The exception I'll allow
+
+Section headers inside a long Markdown or AsciiDoc file are fine -- those _are_ the structure, not a decoration on top of it.
+And the occasional `// SAFETY:` or `// TODO(name):` tag earns its keep because it carries information.
+
+The test I apply: _does this comment tell the reader something the code doesn't?_
+If yes, keep it.
+If it's just a fence around code that already speaks for itself, take it out.
