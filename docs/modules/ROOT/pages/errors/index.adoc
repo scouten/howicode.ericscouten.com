@@ -1,0 +1,11 @@
+= Handle errors deliberately
+
+A surprising amount of the code I write is about what happens when something goes wrong.
+Network calls fail. Files don't exist. Inputs don't parse. The list goes on.
+
+How those error cases are handled has a big effect on how a function reads.
+Done well, error handling fades into the background and lets the main logic speak for itself.
+Done poorly, it can dominate the code and obscure what's actually happening.
+
+I care about getting this right, both because I want my code to be reliable and because I want it to be readable.
+I'll share some of my specific habits on the next few pages.

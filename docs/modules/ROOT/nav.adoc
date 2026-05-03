@@ -7,6 +7,8 @@
 * xref:credit-cards/index.adoc[]
 ** xref:credit-cards/code-coverage.adoc[]
 ** xref:credit-cards/strongly-typed.adoc[]
+* xref:errors/index.adoc[]
+** xref:errors/fail-fast.adoc[]
 * xref:formatting/index.adoc[]
 ** xref:formatting/code-formatters.adoc[]
 ** xref:formatting/vertical-whitespace.adoc[]
