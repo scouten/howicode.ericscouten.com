@@ -7,11 +7,11 @@ Error cases need to be acknowledged and dealt with, but they shouldn't dominate 
 One reason this matters: I've come to think of indentation as a code smell.
 Each level of indentation is another piece of context I have to keep in my head while reading: another condition that's true, another loop I'm inside, another branch I'm partway through.
 By the time I'm three or four levels deep, I've usually lost the thread.
-It's not always wrong -- some logic genuinely needs to be nested -- but when I see a function drifting toward the right side of my screen, I take it as a signal to stop and ask: is there a flatter way to write this?
+It's not always wrong — some logic genuinely needs to be nested — but when I see a function drifting toward the right side of my screen, I take it as a signal to stop and ask: is there a flatter way to write this?
 
 The simplest way to flatten error handling is to take care of it _first_ and _early._
 If something can go wrong, I check for it at the top of the function and exit immediately when it does.
-By the time the reader reaches the meat of the function, they know all the preconditions are satisfied -- and the code that depends on them sits at the outermost indentation level, where the eye naturally lands.
+By the time the reader reaches the meat of the function, they know all the preconditions are satisfied — and the code that depends on them sits at the outermost indentation level, where the eye naturally lands.
 
 == An example
 
@@ -35,7 +35,7 @@ fn process(input: &str) -> Result<Output, Error> {
 
 By the time I reach the `else` branch, I've forgotten what the original error was.
 I have to scroll back, find the `if let`, and reconstruct what failed.
-Worse, the meaningful part of the function -- the four lines that actually do the work -- is wrapped in an extra layer of indentation for no good reason.
+Worse, the meaningful part of the function — the four lines that actually do the work — is wrapped in an extra layer of indentation for no good reason.
 
 Compare with this version:
 
@@ -55,7 +55,7 @@ fn process(input: &str) -> Result<Output, Error> {
 ----
 
 The error case is acknowledged up front and dispatched immediately.
-The rest of the function reads as a straight sequence of steps -- no nesting, no `else`, no surprises.
+The rest of the function reads as a straight sequence of steps — no nesting, no `else`, no surprises.
 
 == Why this works
 

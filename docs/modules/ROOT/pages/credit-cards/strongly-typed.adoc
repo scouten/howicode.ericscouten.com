@@ -7,7 +7,7 @@ Having lived both experiences, I am now firmly in the strongly-typed camp.
 
 To be sure, there's more friction to writing in a strongly-typed language.
 You spend more time fighting with the compiler.
-But that's because it's spotting -- and preventing -- potential flaws in your project.
+But that's because it's spotting — and preventing — potential flaws in your project.
 
 When I've written code in weakly-typed languages, I've found that developers
 (a) make up for the lack of type checking with defensive coding practices,

@@ -36,7 +36,7 @@ The clever approach might be shorter or feel more elegant, but if I can't clearl
 == I proofread carefully
 
 Maybe it's just me, but I think the quality of comments and documentation says a lot about the overall attention to detail in a codebase.
-Well-written language is kind of like good UI design -- it makes everything feel more polished and trustworthy.
+Well-written language is kind of like good UI design — it makes everything feel more polished and trustworthy.
 
 [#make-it-small]
 == I like small things

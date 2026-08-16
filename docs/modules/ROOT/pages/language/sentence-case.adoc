@@ -6,7 +6,7 @@ I've been influenced by the https://learn.microsoft.com/en-us/style-guide/capita
 Here are the main points I follow:
 
 * Most of the time, I capitalize like a regular sentence: The first word and proper nouns get capitals; everything else stays lowercase.
-* I avoid ALL CAPS for emphasis. _(Though I do make an exception for admonitions -- see <<upper-case-admonitions>>.)_
+* I avoid ALL CAPS for emphasis. _(Though I do make an exception for admonitions — see <<upper-case-admonitions>>.)_
 * I use title case for proper nouns (actual names of things).
 
 For example, this site's name is _How I Code_ (title case), but individual page titles and section headings are in sentence case.
@@ -15,7 +15,7 @@ For example, this site's name is _How I Code_ (title case), but individual page 
 == Exception: All capitals for admonitions
 
 I do make one exception to my “no ALL CAPS” rule: _admonitions_.
-Those are things like FIXME, WARNING, NOTE, etc. -- words that flag specific types of content.
+Those are things like FIXME, WARNING, NOTE, etc. — words that flag specific types of content.
 
 I use all capitals for these (in a smaller font size, where possible) to make them stand out, like in the labels for these examples:
 

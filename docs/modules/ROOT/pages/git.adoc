@@ -9,14 +9,14 @@ Here are a few Git-related habits I've developed over time that work well for me
 I've gotten into the habit of using https://www.conventionalcommits.org/en/v1.0.0/[Conventional Commits] syntax in most of my projects.
 It plays nicely with the release automation tools I use and I find the structured format makes it easier to write good commit messages.
 
-For commit titles, I follow the same approach I mentioned in xref:language/complete-sentences.adoc#exception-titles-and-captions[Titles and captions] -- they don't need to be complete sentences.
+For commit titles, I follow the same approach I mentioned in xref:language/complete-sentences.adoc#exception-titles-and-captions[Titles and captions] — they don't need to be complete sentences.
 
 == I try to keep commits focused
 
 This ties back to my general philosophy about xref:guiding-principles.adoc#one-thing[things doing one thing], but it applies to Git too.
-I've found that commits and pull requests are easier to review -- and understand later -- when they stick to one main purpose.
+I've found that commits and pull requests are easier to review — and understand later — when they stick to one main purpose.
 
-If I catch myself writing a commit message with “and” in it -- like “Fix the parser and refactor some tests” -- I take that as a sign that I should split things up.
+If I catch myself writing a commit message with “and” in it — like “Fix the parser and refactor some tests” — I take that as a sign that I should split things up.
 
 == I prefer squash commits
 
@@ -26,7 +26,7 @@ I'm pretty heavy on automation (maybe I'll write about that someday), and PRs gi
 When I merge a pull request, I almost always use a squash commit.
 I find the details of how I got to the end result of the pull request just add noise to the history.
 
-TIP: Don't worry -- GitHub keeps all those individual commits around even after you squash a pull request.
+TIP: Don't worry — GitHub keeps all those individual commits around even after you squash a pull request.
 You can always un-delete the pull request branch if you need to dig into what happened during development.
 I've found it reassuring to know that safety net exists, even though I've rarely needed to use it.
 
@@ -34,7 +34,7 @@ I've found it reassuring to know that safety net exists, even though I've rarely
 
 There are a few cases where I skip the squash and do a regular merge instead:
 
-* Long-running maintenance or release branches that need to stay in sync with `main` -- those get merged with a merge commit to preserve the commit history and any release tags that might have been added along the way.
+* Long-running maintenance or release branches that need to stay in sync with `main` — those get merged with a merge commit to preserve the commit history and any release tags that might have been added along the way.
 * When I'm pulling in commits from another project that I track over time, like in my https://github.com/scouten/asciidoc-parser[`asciidoc-parser` project] where I want to keep a clear connection to the upstream project.
 
 == I keep source code and build artifacts separate

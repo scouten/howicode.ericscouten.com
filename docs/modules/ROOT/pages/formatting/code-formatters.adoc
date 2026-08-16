@@ -7,7 +7,7 @@ That means _everyone_ can format their code the same way with zero configuration
 
 When I start a new Rust project, one of the first things I do is make sure `rustfmt` is part of the workflow.
 I typically set up a pre-commit hook or CI check so that unformatted code can't sneak in.
-That way, I never have to think about where to put braces or how to break long lines -- the tool handles it for me.
+That way, I never have to think about where to put braces or how to break long lines — the tool handles it for me.
 
 == Why this matters
 
@@ -39,15 +39,15 @@ wrap_comments = true
 
 Let me walk through some of these choices:
 
-* `blank_lines_upper_bound = 1` -- I use vertical whitespace intentionally (more on that xref:formatting/vertical-whitespace.adoc[in the next page]), so I don't want the formatter removing my blank lines. But I also don't need _two_ blank lines anywhere, so this keeps things tidy.
+* `blank_lines_upper_bound = 1` — I use vertical whitespace intentionally (more on that xref:formatting/vertical-whitespace.adoc[in the next page]), so I don't want the formatter removing my blank lines. But I also don't need _two_ blank lines anywhere, so this keeps things tidy.
 
-* `format_code_in_doc_comments = true` -- I spend a lot of time writing documentation, and code examples in docs should be formatted consistently with the rest of the codebase.
+* `format_code_in_doc_comments = true` — I spend a lot of time writing documentation, and code examples in docs should be formatted consistently with the rest of the codebase.
 
-* `group_imports = "StdExternalCrate"` -- This organizes `use` statements into groups: standard library first, then external crates, then the current crate. It makes it easier to scan imports at a glance.
+* `group_imports = "StdExternalCrate"` — This organizes `use` statements into groups: standard library first, then external crates, then the current crate. It makes it easier to scan imports at a glance.
 
-* `imports_granularity = "Crate"` -- This consolidates imports from the same crate into a single `use` statement. Less visual noise.
+* `imports_granularity = "Crate"` — This consolidates imports from the same crate into a single `use` statement. Less visual noise.
 
-* `wrap_comments = true` -- Long comments get wrapped to fit within the line length. Consistent formatting, even in prose.
+* `wrap_comments = true` — Long comments get wrapped to fit within the line length. Consistent formatting, even in prose.
 
 NOTE: Some of these options require the nightly version of `rustfmt`, hence the `unstable_features = true` setting.
 
