@@ -1,0 +1,102 @@
+= I'm picky about punctuation
+
+Punctuation is the easiest part of writing to be inconsistent about.
+Nobody notices a well-placed dash, but a page full of mismatched ones reads as careless — the same way inconsistent indentation does in code.
+
+These are the rules I apply everywhere: comments, documentation, commit messages, and the prose on this site.
+
+== I use a spaced em dash for asides
+
+When I want a dash to set off an aside — like this one — I use an em dash with a space on either side.
+
+.Spaced em dash sets off the aside
+[source.prefer,rust]
+----
+// Read the value from the cache — falling back to the network
+// when it isn't there yet.
+----
+
+.Spaced en dash sets off the aside
+[source.avoid,rust]
+----
+// Read the value from the cache – falling back to the network
+// when it isn't there yet.
+----
+
+NOTE: This reverses what I used to do.
+For years I set asides with a spaced en dash, which is house style at a few publications I read regularly.
+I've since come around to the em dash, so any older writing of mine that uses an en dash this way is simply out of date.
+
+I also avoid the `--` shorthand in finished copy, even though AsciiDoc and most Markdown toolchains will convert it for me.
+The shorthand hides what I'm actually going to get, and it doesn't behave the same everywhere: it's substituted in ordinary prose and inside an inline code span, but left alone inside a listing block.
+Typing the character directly takes the guesswork out of it, and it makes the source greppable — I can search for the thing I mean.
+
+[#en-dash-jobs]
+=== The en dash still has two jobs
+
+I haven't retired the en dash.
+I've narrowed it to the two places it belongs, and in both of them it's closed up with no spaces around it:
+
+* *Numeric ranges*, where the dash reads as “through”: `0–1`, `96–128 kbps`, rules 13–15.
+The one time I space it is when the numbers themselves are elided, as in “’21 – ’22.”
+
+* *Coordinate compounds*, joining two terms of equal weight: San Mateo–Hayward Bridge, Seattle–Tacoma, cost–benefit analysis.
+A plain hyphen is just as correct here (cost-benefit), so I leave whichever one is already in the text alone rather than converting between them.
+What I never use in this position is an em dash.
+
+Spacing is what tells the two dashes apart in practice.
+The parenthetical dash is spaced and always an em dash; every legitimate en dash is closed up.
+A _spaced en dash_ is the one combination that's always wrong.
+
+== I use one space after a period
+
+Two spaces after a period is a typewriter habit.
+Monospaced typewriter faces needed the extra gap to make a sentence break visible; proportional type sets that gap for you.
+
+The second space is invisible in rendered output anyway, since HTML, AsciiDoc, and Markdown all collapse runs of whitespace.
+It survives only in the source, where it shows up in diffs and defeats searches for a phrase that happens to span a sentence boundary.
+
+.One space after the period
+[source.prefer,rust]
+----
+// Parse the header first. The body offset depends on it.
+----
+
+.Two spaces after the period
+[source.avoid,rust]
+----
+// Parse the header first.  The body offset depends on it.
+----
+
+Most of the time the question doesn't come up, because I write one sentence per line in AsciiDoc source.
+It renders identically, and it keeps a diff scoped to the sentence I actually changed instead of reflowing a whole paragraph.
+
+== I use smart quotes in prose and straight quotes in code
+
+In prose — comments, documentation, the pages on this site — I use typographic quotation marks and apostrophes: “curly” rather than "straight," and a proper ’ in contractions rather than the ASCII tick.
+They're what the text is supposed to look like, and every place I publish renders them correctly.
+
+The exception is anything the language has to parse.
+String literals, identifiers, file paths, shell commands, and anything else a reader might copy out of my writing and paste somewhere it has to run all get straight quotes, always.
+
+A curly quote inside a string literal is a syntax error, and a nasty one: the two characters are nearly identical in most fonts, so the compiler complains about a line that looks perfectly fine.
+Anyone who has pasted a command out of a blog post and watched it fail for no visible reason has met this bug.
+
+The rule I apply is mechanical: inside backticks or a listing block, straight quotes; everywhere else, curly.
+
+.Curly quotes in the comment, straight quotes in the code
+[source.prefer,rust]
+----
+// Read the “display name” from the metadata.
+let name = meta.get("display_name")?;
+----
+
+.Straight quotes in the comment, curly quotes in the code
+[source.avoid,rust]
+----
+// Read the "display name" from the metadata.
+let name = meta.get(“display_name”)?;
+----
+
+As with dashes, I type the characters themselves rather than reaching for AsciiDoc's quoted-text shorthand.
+The character is what I mean, and it's what I want to see when I open the file.

@@ -14,7 +14,7 @@ pub struct Parser {
 ----
 
 Or a row of `=====` signs separating one chunk of a file from the next.
-Or a banner comment that says `// -- Helpers --` immediately above a function called `helper_for_something`.
+Or a banner comment that says `+// -- Helpers --+` immediately above a function called `helper_for_something`.
 
 I avoid all of these.
 
@@ -24,7 +24,7 @@ I'm talking about comments and ASCII art whose only job is to draw the eye — n
 A few common forms:
 
 * Long lines of `//`, `--`, `==`, or `*` used as visual separators between sections.
-* Banner comments that restate the name of the thing immediately below them (`// -- Parser --` right before `pub struct Parser`).
+* Banner comments that restate the name of the thing immediately below them (`+// -- Parser --+` right before `pub struct Parser`).
 * Boxed headers built out of `+--------+` characters.
 * Decorative ASCII flourishes around a module-level doc comment.
 
@@ -40,7 +40,7 @@ If I want to jump to the parser, I ask the editor to take me there; I don't scro
 *Decorations rot.*
 Code moves around.
 Sections get split, merged, or renamed.
-The banner that said `// -- Parser --` stays put long after the parser has been pulled into its own module, and now it's actively misleading.
+The banner that said `+// -- Parser --+` stays put long after the parser has been pulled into its own module, and now it's actively misleading.
 Plain code can't lie about what it is; a decorative comment can.
 
 *They make diffs noisier.*
